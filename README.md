@@ -1,35 +1,253 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# YZZ HelpDesk 🚀
 
-## Getting Started
+A modern HelpDesk ticket management application built with **Next.js**, **React**, **Tailwind CSS**, and **JSON Server**.
 
-First, run the development server:
+YZZ HelpDesk helps users view support tickets, check ticket details, and manage support requests through a clean and responsive dashboard.
+
+---
+
+## ✨ Features
+
+- 📋 View all support tickets
+- 🎫 View individual ticket details
+- ⚡ Next.js App Router dynamic routing
+- 🎨 Custom UI with Tailwind CSS
+- 🔄 Fetch ticket data using JSON Server
+- 🚀 Static generation with `generateStaticParams`
+- ♻️ Incremental Static Regeneration (ISR)
+- 🛑 Custom 404 handling with `notFound()`
+- 🧩 Reusable React components
+- 📱 Responsive layout
+
+---
+
+## 🛠️ Technologies Used
+
+- Next.js
+- React
+- Tailwind CSS
+- JavaScript (ES6+)
+- JSON Server
+
+---
+
+## 📂 Project Structure
+
+```
+yzz-helpdesk/
+│
+├── app/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   └── Logo.png
+│   │
+│   ├── tickets/
+│   │   ├── page.jsx
+│   │   └── [id]/
+│   │       └── page.jsx
+│   │
+│   ├── globals.css
+│   ├── layout.jsx
+│   └── page.jsx
+│
+├── _data/
+│   └── db.json
+│
+├── package.json
+├── tailwind.config.js
+└── next.config.js
+```
+
+---
+
+# ⚙️ Installation
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/HAMYL-Aththnayaka/yzz-helpDesk.git
+```
+
+## 2. Navigate to the project folder
+
+```bash
+cd yzz-helpdesk_next_js_totorial
+```
+
+## 3. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+# ▶️ Running the Application
+
+Start the Next.js development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+# 🗄️ Running JSON Server API
 
-To learn more about Next.js, take a look at the following resources:
+Install JSON Server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install json-server -g
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Start the API server:
 
-## Deploy on Vercel
+```bash
+json-server --watch --port 4000 ./_data/db.json
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+API endpoint:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-"# yzz-helpDesk" 
+```
+http://localhost:4000/tickets
+```
+
+---
+
+# 🌐 Routes
+
+| Route | Description |
+|---|---|
+| `/` | Dashboard |
+| `/tickets` | Ticket list |
+| `/tickets/[id]` | Ticket details |
+
+Example:
+
+```
+/tickets/1
+```
+
+---
+
+# 📦 Ticket Data Example
+
+```json
+{
+  "id": "1",
+  "title": "Unable to access company dashboard",
+  "body": "User is unable to log into the dashboard.",
+  "priority": "high",
+  "user_email": "alex.johnson@yzz.com"
+}
+```
+
+---
+
+# ⚡ Next.js Concepts Used
+
+## Dynamic Routes
+
+Ticket details pages are created using:
+
+```
+app/tickets/[id]/page.jsx
+```
+
+The `[id]` folder creates dynamic pages automatically.
+
+---
+
+## Server Components
+
+Data fetching is performed inside async server components:
+
+```javascript
+const ticket = await get_Ticket_data(id);
+```
+
+---
+
+## Static Generation
+
+Using:
+
+```javascript
+generateStaticParams()
+```
+
+to pre-generate ticket pages.
+
+---
+
+## Incremental Static Regeneration
+
+Using:
+
+```javascript
+next: {
+  revalidate: 60
+}
+```
+
+to refresh cached data automatically.
+
+---
+
+# 📸 Screenshots
+
+## Dashboard
+
+<!-- Add dashboard screenshot here -->
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+## Ticket List
+
+<!-- Add tickets page screenshot here -->
+
+![Tickets Screenshot]()
+
+
+## Ticket Details
+
+<!-- Add ticket details screenshot here -->
+
+![Ticket Details Screenshot]()
+
+
+---
+
+# 🎨 UI Theme
+
+The application includes:
+
+- Light purple and blue color theme
+- Clean HelpDesk dashboard design
+- Ticket cards with priority labels
+- Responsive navigation
+- Modern user interface
+
+---
+
+# 👨‍💻 Author
+
+**HAMYL Aththnayaka**
+
+GitHub:
+
+https://github.com/HAMYL-Aththnayaka
+
+---
+
+# 📜 License
+
+This project is created for learning and educational purposes.

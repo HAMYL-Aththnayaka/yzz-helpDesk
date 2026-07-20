@@ -24,6 +24,7 @@ h2 {
   @apply font-bold text-sky-700;
 }
 
+
 h2 {
   @apply text-3xl mb-5;
 }
@@ -40,7 +41,6 @@ main {
 ========================= */
 
 nav {
-
   @apply
     max-w-6xl
     mx-auto
@@ -60,7 +60,6 @@ nav {
 
 
 nav span {
-
   @apply
     font-bold
     text-xl
@@ -69,17 +68,21 @@ nav span {
 
 
 nav a {
-
   @apply
     text-slate-600
     font-medium
-    transition;
+    transition
+    duration-200;
 }
 
 
 nav a:hover {
-
   @apply text-emerald-600;
+}
+
+
+.tickets-header {
+  @apply flex items-center justify-between;
 }
 
 
@@ -89,7 +92,6 @@ nav a:hover {
 ========================= */
 
 button {
-
   @apply
     px-6
     py-3
@@ -101,34 +103,64 @@ button {
 
 
 .btn-primary {
-
   @apply
     bg-sky-500
     text-white
-    shadow-md;
+    shadow-md
+    px-5
+    py-2.5
+    rounded-lg
+    inline-block;
 }
 
 
 .btn-primary:hover {
-
   @apply
     bg-sky-600
+    text-white
     shadow-lg;
 }
 
 
 .btn-secondary {
-
   @apply
     bg-emerald-500
-    text-white;
+    text-white
+    px-5
+    py-2.5
+    rounded-lg
+    inline-block;
 }
 
 
 .btn-secondary:hover {
-
   @apply
-    bg-emerald-600;
+    bg-emerald-600
+    text-white;
+}
+
+
+.btn-third {
+  @apply
+    bg-sky-500
+    text-white
+    px-5
+    py-2.5
+    rounded-lg
+    font-semibold
+    shadow-sm
+    transition
+    duration-200
+    inline-block;
+}
+
+
+.btn-third:hover,
+nav a.btn-third:hover {
+  @apply
+    bg-emerald-600
+    text-white
+    shadow-md;
 }
 
 
@@ -138,7 +170,6 @@ button {
 ========================= */
 
 form {
-
   @apply
     bg-white
     border
@@ -152,7 +183,6 @@ form {
 
 
 form label {
-
   @apply
     text-slate-700
     font-medium;
@@ -162,7 +192,6 @@ form label {
 form input,
 form textarea,
 form select {
-
   @apply
     bg-sky-50
     border
@@ -179,7 +208,6 @@ form select {
 form input:focus,
 form textarea:focus,
 form select:focus {
-
   @apply
     outline-none
     border-sky-400
@@ -194,7 +222,6 @@ form select:focus {
 ========================= */
 
 .card {
-
   @apply
     bg-white
     border
@@ -208,7 +235,6 @@ form select:focus {
 
 
 .card:hover {
-
   @apply
     shadow-lg
     border-sky-200;
@@ -216,7 +242,6 @@ form select:focus {
 
 
 .card h3 {
-
   @apply
     text-xl
     font-bold
@@ -226,7 +251,6 @@ form select:focus {
 
 
 .card p {
-
   @apply
     text-slate-600;
 }
@@ -238,7 +262,6 @@ form select:focus {
 ========================= */
 
 .pill {
-
   @apply
     px-3
     py-1
@@ -249,7 +272,6 @@ form select:focus {
 
 
 .pill.high {
-
   @apply
     bg-red-100
     text-red-600;
@@ -257,7 +279,6 @@ form select:focus {
 
 
 .pill.medium {
-
   @apply
     bg-sky-100
     text-sky-700;
@@ -265,7 +286,6 @@ form select:focus {
 
 
 .pill.low {
-
   @apply
     bg-emerald-100
     text-emerald-700;
@@ -278,7 +298,6 @@ form select:focus {
 ========================= */
 
 .error {
-
   @apply
     bg-red-50
     border
