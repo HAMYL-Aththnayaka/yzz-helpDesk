@@ -41,6 +41,14 @@
       "body": "Users cannot upload screenshots or documents when creating a new ticket. The upload button returns an unexpected error.",
       "priority": "high",
       "user_email": "olivia.martin@yzz.com"
+    },
+    {
+      "title": "Bala",
+      "body": "ascadv",
+      "priority": "low",
+      "user_email": "vavas",
+      "id": "IdcoEWeQJv4"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

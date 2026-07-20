@@ -2,6 +2,9 @@ import Link from "next/link";
 
 //fetching Tickets logic
 async function fetch_tickets() {
+
+    //just trying delaing to see delay screen
+    await new Promise(resolve => setTimeout(resolve,3000));
     const result = await fetch("http://localhost:4000/tickets", {
         next: {
           //revalidate: 30 // only after 30 seconds it will update again from database
@@ -15,6 +18,9 @@ async function fetch_tickets() {
 }
 
 export default async function TicketList() {
+    //just trying delaing to see delay screen
+    await new Promise(resolve => setTimeout(resolve,3000));
+    
     const tickets = await fetch_tickets();
     return (
         <>
