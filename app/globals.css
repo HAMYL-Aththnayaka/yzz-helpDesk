@@ -2,26 +2,289 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* =========================
+   Base Theme
+========================= */
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    135deg,
+    #f0f9ff 0%,
+    #ecfeff 50%,
+    #f0fdf4 100%
+  );
+
+  @apply text-slate-700 min-h-screen;
+}
+
+
+h1,
+h2 {
+  @apply font-bold text-sky-700;
+}
+
+h2 {
+  @apply text-3xl mb-5;
+}
+
+
+main {
+  @apply max-w-6xl mx-auto px-6 py-10;
+}
+
+
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+
+  @apply
+    max-w-6xl
+    mx-auto
+    mt-6
+    mb-10
+    px-6
+    py-4
+    flex
+    items-center
+    gap-8
+    bg-white
+    rounded-2xl
+    shadow-sm
+    border
+    border-sky-100;
+}
+
+
+nav span {
+
+  @apply
+    font-bold
+    text-xl
+    text-sky-600;
+}
+
+
+nav a {
+
+  @apply
+    text-slate-600
+    font-medium
+    transition;
+}
+
+
+nav a:hover {
+
+  @apply text-emerald-600;
+}
+
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+
+  @apply
+    px-6
+    py-3
+    rounded-xl
+    font-semibold
+    transition
+    duration-200;
+}
+
+
+.btn-primary {
+
+  @apply
+    bg-sky-500
+    text-white
+    shadow-md;
+}
+
+
+.btn-primary:hover {
+
+  @apply
+    bg-sky-600
+    shadow-lg;
+}
+
+
+.btn-secondary {
+
+  @apply
+    bg-emerald-500
+    text-white;
+}
+
+
+.btn-secondary:hover {
+
+  @apply
+    bg-emerald-600;
+}
+
+
+
+/* =========================
+   Forms
+========================= */
+
+form {
+
+  @apply
+    bg-white
+    border
+    border-sky-100
+    rounded-2xl
+    shadow-md
+    p-8
+    mx-auto
+    max-w-md;
+}
+
+
+form label {
+
+  @apply
+    text-slate-700
+    font-medium;
+}
+
+
+form input,
+form textarea,
+form select {
+
+  @apply
+    bg-sky-50
+    border
+    border-sky-200
+    rounded-xl
+    px-4
+    py-3
+    w-full
+    mt-2
+    mb-5;
+}
+
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+
+  @apply
+    outline-none
+    border-sky-400
+    ring-2
+    ring-sky-100;
+}
+
+
+
+/* =========================
+   Cards
+========================= */
+
+.card {
+
+  @apply
+    bg-white
+    border
+    border-sky-100
+    rounded-2xl
+    shadow-sm
+    p-6
+    my-6
+    transition;
+}
+
+
+.card:hover {
+
+  @apply
+    shadow-lg
+    border-sky-200;
+}
+
+
+.card h3 {
+
+  @apply
+    text-xl
+    font-bold
+    text-slate-800
+    mb-3;
+}
+
+
+.card p {
+
+  @apply
+    text-slate-600;
+}
+
+
+
+/* =========================
+   Ticket Priority
+========================= */
+
+.pill {
+
+  @apply
+    px-3
+    py-1
+    rounded-full
+    text-xs
+    font-semibold;
+}
+
+
+.pill.high {
+
+  @apply
+    bg-red-100
+    text-red-600;
+}
+
+
+.pill.medium {
+
+  @apply
+    bg-sky-100
+    text-sky-700;
+}
+
+
+.pill.low {
+
+  @apply
+    bg-emerald-100
+    text-emerald-700;
+}
+
+
+
+/* =========================
+   Error
+========================= */
+
+.error {
+
+  @apply
+    bg-red-50
+    border
+    border-red-200
+    text-red-600
+    rounded-xl
+    px-4
+    py-3;
 }
