@@ -1,0 +1,46 @@
+{
+  "tickets": [
+    {
+      "id": "1",
+      "title": "Unable to access company dashboard",
+      "body": "User is unable to log into the YZZ HelpDesk dashboard after entering correct credentials. The issue started this morning and prevents access to important support tickets.",
+      "priority": "high",
+      "user_email": "alex.johnson@yzz.com"
+    },
+    {
+      "id": "2",
+      "title": "Update customer profile settings page",
+      "body": "The customer profile page needs a new layout with improved user information display and easier editing options for support staff.",
+      "priority": "medium",
+      "user_email": "sarah.williams@yzz.com"
+    },
+    {
+      "id": "3",
+      "title": "Email notifications are not working",
+      "body": "Users are not receiving email notifications when their support tickets are updated. Please check the notification service and email configuration.",
+      "priority": "high",
+      "user_email": "michael.brown@yzz.com"
+    },
+    {
+      "id": "4",
+      "title": "Add dark mode support",
+      "body": "The support team requested a dark mode option to improve usability during night shifts and reduce eye strain.",
+      "priority": "low",
+      "user_email": "emma.davis@yzz.com"
+    },
+    {
+      "id": "5",
+      "title": "Ticket search is slow",
+      "body": "Searching through existing support tickets takes too long when there are many records. Database queries may need optimization.",
+      "priority": "medium",
+      "user_email": "daniel.wilson@yzz.com"
+    },
+    {
+      "id": "6",
+      "title": "Fix broken attachment uploads",
+      "body": "Users cannot upload screenshots or documents when creating a new ticket. The upload button returns an unexpected error.",
+      "priority": "high",
+      "user_email": "olivia.martin@yzz.com"
+    }
+  ]
+}

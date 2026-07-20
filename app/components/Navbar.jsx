@@ -10,7 +10,7 @@ export default function Navbar() {
           src={Logo}
           alt="YZZ Logo"
           width={170}
-          height={50}
+          height={150}
           quality={100}
           placeholder="blur"
         />

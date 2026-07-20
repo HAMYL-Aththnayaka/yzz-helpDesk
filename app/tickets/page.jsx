@@ -1,6 +1,14 @@
+import TicketList from "./TicketList";
+
 export default function ticket(){
     return (
     <main>
-        <h2>Ticket</h2>
+        <nav>
+            <div>
+                <h2>Tickets</h2>
+                <p><small>currently open tickets</small></p>
+            </div>
+        </nav>
+        <TicketList/>
     </main>
     )};
